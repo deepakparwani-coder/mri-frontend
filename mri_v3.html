@@ -1475,7 +1475,7 @@ function go(){
       // If backend fails, offer to try direct Anthropic
       rtyp();
       var msg = e.message || "Cannot connect to API server";
-      ab("b", '<span style="color:#DC2626;font-weight:600">' + esc(msg) + '</span><br><span style="color:#8C8578;font-size:12px">API server not reachable. Make sure start_server.bat is running.<br><button onclick="USE_BACKEND=false;retryLast()" style="margin-top:8px;background:linear-gradient(135deg,#C9A84C,#B8963E);color:#fff;border:none;border-radius:6px;padding:8px 18px;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer">Switch to Direct Mode</button></span>', true);
+      ab("b", '<span style="color:#DC2626;font-weight:600">' + esc(msg) + '</span><br><span style="color:#8C8578;font-size:12px">API server not reachable. Please retry in a moment, or contact support if this persists.<br><button onclick="USE_BACKEND=false;retryLast()" style="margin-top:8px;background:linear-gradient(135deg,#C9A84C,#B8963E);color:#fff;border:none;border-radius:6px;padding:8px 18px;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer">Switch to Direct Mode</button></span>', true);
       busy=false;sbtn.disabled=false;
     });
     return; // Skip the direct Anthropic path below
